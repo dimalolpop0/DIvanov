@@ -1,0 +1,1 @@
+a = int(input())if a < 0:    print("А меньше 0")if a > 0:    print("А больше 0")
