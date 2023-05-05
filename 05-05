@@ -1,0 +1,15 @@
+from random import randint
+popit = 0
+n=randint(0,100)
+k=int(input("Угадай число от0 до 100:"))
+while k!=n:
+    k=int(input("Повторите попытку:"))
+    if k<n:
+        popit += 1
+        print("Число меньше")
+    elif k>n:
+        popit += 1
+        print("Число больше")
+    else:
+        print("вы угадали!")
+print (popit)    
