@@ -1,36 +1,35 @@
-life = 3
-def zadachi():
-
-    a = input()
-    if a == "висит":
-        b = input()
-        while b != "груша":
-            if life != 0:
-                life -= 1
-                print("у вас осталось", life)
-                b = input()
-            else:
-                print("закончились попытки")
-                break
-    a = input()
-    if a == "река":
-        b = input()
-        while b != "сухой":
-            if life != 0:
-                life -= 1
-                print("у вас осталось", life)
-                b = input()
-            else:
-                print("закончились попытки")
-                break
-    a = input()
-    if a == "застежки":           
-        b = input()
-        while b != "лук":
-            if life != 0:
-                life -= 1
-                print("у вас осталось", life)
-                b = input()
-            else:
-                print("закончились попытки")
- перерыв
+def questions():
+    life = 3
+    while life > 0:
+        print("1 Загадка: зимой и летом одним светом.")
+        a = str(input())
+        if a.lower() != "ёлка":
+            life -= 1 
+            print("неправильно!", "кол-во оставшихся попыток:", life)
+        else:
+            print("молодец!", "у тебя осталось:", life)
+            break
+    while life > 0:
+        print('2 Загадка: висит груша нельзя скушать.')
+        a = str(input())
+        if a.lower() != "лампа":
+            life -= 1 
+            print("неправильно!", "кол-во оставшихся попыток:", life)
+        else:
+            print("молодец!", "у тебя осталось:", life)
+            break
+    while life > 0:
+        print('3 Загадка: зимой белый, летом серый')
+        a = str(input())
+        if a.lower() != "заяц":
+            life -= 1 
+            print("неправильно!", "кол-во оставшихся попыток:", life)
+        else:
+            print("молодец!", "у тебя осталось:", life)
+            break
+    b = life    
+questions()
+if b > 0:
+    print("Молодец ты закончил отвечать на вопросы!")
+else:
+    print("Попробуй в следующий раз!")
